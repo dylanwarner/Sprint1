@@ -12,6 +12,4 @@ function uploadImage() {
     } else {
         image.src = "";
     }
-
-    uploadImage();
 }
