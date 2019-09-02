@@ -14,13 +14,40 @@
                 <div id="buttons">
                     <label>Upload: </label>
                     <input type="file" onchange="uploadImage()">
+                    <select id="filters" onchange="changeFilter(this.options[this.selectedIndex].value)">
+                            <option value="normal">Normal</option>
+                            <option value="grayscale">Grayscale</option>
+                            <option value="sepia">Sepia</option>
+                            <option value="inverted">Inverted</option>
+                            <option value="saturated">Saturated</option>
+                            <option value="hue90">Hue Rotate 90</option>
+                            <option value="hue180">Hue Rotate 180</option>
+                            <option value="hue270">Hue Rotate 270</option>
+                    </select>
                     <button class="button">Save</button>
                     <button class="button" onClick="document.location.reload(true)">Reset</button>
                 </div>
                 <div id="image-scroller">
-                    <img class="draggable sticker" style="left:5%;top:10%;" src="imgs/sticker-1.png" alt="draggable image" draggable="false">
-                    <img class="draggable sticker" style="left:15%;top:10%;" src="imgs/sticker-3.png" alt="draggable image" draggable="false">
-                    <img class="draggable sticker" style="left:25%;top:10%;" src="imgs/sticker-2.png" alt="draggable image" draggable="false">
+                    <!-- Animal/Shape Stickers -->
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:4%;top:3%;" src="imgs/sticker-1.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:12%;top:0%;" src="imgs/sticker-2.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:20%;top:5%;" src="imgs/sticker-3.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:11%;top:11%;" src="imgs/sticker-4.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:5%;top:17%;" src="imgs/Shroom_Short.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <!-- Face Stickers -->
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:73%;top:0%;" src="imgs/Nose.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:80%;top:0%;" src="imgs/Nose1.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:75%;top:20%;" src="imgs/Smile.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:80%;top:45%;" src="imgs/Eyes.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:70%;top:63%;" src="imgs/Eyes_Cry.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:68%;top:32%;" src="imgs/Smile1.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <!-- Word Stickers -->
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:3%;top:40%;" src="imgs/Asset_2.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:17%;top:40%;" src="imgs/Asset_3.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:6%;top:50%;" src="imgs/Asset_1.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:3%;top:63%;" src="imgs/Asset_4.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:14%;top:62%;" src="imgs/Asset_5.png" alt="draggable image" draggable="false" class="draggable sticker">
+                    <img id="original" ondblclick="scaleSticker(this)" onmousedown="dragMouseDown(event, this)" style="left:10%;top:72%;" src="imgs/Asset_6.png" alt="draggable image" draggable="false" class="draggable sticker">
                 </div>
             </div>
         </div>

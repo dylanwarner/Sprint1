@@ -100,58 +100,20 @@ input {
     position: absolute;
     z-index: 9;
     cursor: move;
+    resize: both;
+    overflow: auto;
   }
   .sticker {
-    height:100px;
-    width:100px;
+    transform: scale(0.5);
   }
-  
-  /* Filters for Images */
-  .grayscale {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-  }
-  .blur {
-    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-    filter: blur(2.5px);
-  }
-  .low-brightness {
-    -webkit-filter: brightness(10%); /* Safari */
-    filter: brightness(10%);
-  }
-  .high-brightness {
-    -webkit-filter: brightness(200%); /* Safari */
-    filter: brightness(200%);
-  }
-  .low-contrast {
-    -webkit-filter: contrast(10%); /* Safari */
-    filter: contrast(10%);
-  }
-  .high-contrast {
-    -webkit-filter: contrast(200%); /* Safari */
-    filter: contrast(200%);
-  }
-  .hued90 {
-    -webkit-filter: hue-rotate(90deg); /* Safari */
-    filter: hue-rotate(90deg);
-  }
-  .hued180 {
-    -webkit-filter: hue-rotate(90deg); /* Safari */
-    filter: hue-rotate(180deg);
-  }
-  .hued270 {
-    -webkit-filter: hue-rotate(90deg); /* Safari */
-    filter: hue-rotate(270deg);
-  }
-  .inverted {
-    -webkit-filter: invert(100%); /* Safari */
-    filter: invert(100%);
-  }
-  .saturate {
-    -webkit-filter: saturate(800%); /* Safari */
-    filter: saturate(800%);
-  }
-  .sepia {
-    -webkit-filter: sepia(100%); /* Safari */
-    filter: sepia(100%);
+
+  #filters {
+    color: #21262B;
+    background-color: #9be3ea;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding-left: 15px;
+    font-size: 16px;
+    padding: 8px 16px;
   }
